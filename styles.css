@@ -1,0 +1,157 @@
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    color: #4A4A4A;
+    background-color: #FDFBF7;
+}
+
+.banner {
+    background-image: url('images/天仁茗茶1920.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.5em;
+}
+
+main {
+    max-width: 98%;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+section {
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.module {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.module:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.module .text {
+    flex: 1;
+    text-align: left;
+    padding: 0 40px;
+}
+
+.module .image-container {
+    flex: 1;
+}
+
+.module img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.module h2 {
+    font-size: 2em;
+    color: #2F5233;
+    border-bottom: 2px solid #EAEAEA;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.module ul {
+    list-style: none;
+    padding: 0;
+}
+
+.module li {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2F5233;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4A7C59;
+}
+
+.full-width-image-section {
+    margin-bottom: 20px;
+}
+
+.full-width-image-section img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .module,
+    .full-width-image-section {
+        margin-bottom: 20px;
+    }
+
+    .module {
+        flex-direction: column;
+    }
+
+    .module:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .module .image-container {
+        order: 1;
+    }
+
+    .module .text {
+        order: 2;
+    }
+
+    .full-width-image-section {
+        background-color: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .full-width-image-section img {
+        height: auto;
+    }
+}
